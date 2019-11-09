@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 import HomeController from './HomeController';
-import {InviteHeader, InviteContent, InviteFooter, InviteModalContent, BusyIndicator, Modal} from '../../components'
+import {InviteHeader, InviteContent, InviteFooter, InviteModalContent, Modal} from '../../components'
 
 const Home = (props) => (
     <HomeController {...props}>

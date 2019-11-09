@@ -7,7 +7,7 @@ export const sendInviteService = (name, email) => {
             'Content-Type': 'application/json'
         },
         credentials: 'include',
-        body: JSON.stringify({ name ,email}),
+        body: JSON.stringify({name ,email}),
     };
     return fetch(url, fetchParams).then(response =>response.json());
 };

@@ -1,5 +1,5 @@
 import ActionTypes from '../constants/ActionTypes';
-import { sendInviteService } from '../services/InviteService';
+import {sendInviteService} from '../services/InviteService';
 
 export function sendInvite( name, email ) {
     return {
@@ -12,6 +12,6 @@ export function sendInvite( name, email ) {
     };
 }
 
-export const showModal = () => ({ type: ActionTypes.INVITE_SHOW_MODAL });
-export const hideModal = () => ({ type: ActionTypes.INVITE_HIDE_MODAL });
-export const resetModal = () => ({ type: ActionTypes.INVITE_RESET_MODAL });
+export const showModal = () => ({type: ActionTypes.INVITE_SHOW_MODAL});
+export const hideModal = () => ({type: ActionTypes.INVITE_HIDE_MODAL});
+export const resetModal = () => ({type: ActionTypes.INVITE_RESET_MODAL});

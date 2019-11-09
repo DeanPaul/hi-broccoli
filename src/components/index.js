@@ -2,7 +2,6 @@ import InviteHeader from './invite/InviteHeader';
 import InviteContent from './invite/InviteContent';
 import InviteFooter from './invite/InviteFooter';
 import InviteModalContent from './invite/InviteModalContent';
-import BusyIndicator from './common/BusyIndicator';
 import Modal from './common/Modal';
 export {
     InviteHeader,

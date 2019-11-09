@@ -1,7 +1,7 @@
 import {createStore, applyMiddleware, compose} from 'redux';
 import thunk from 'redux-thunk';
 import reducer from '../reducers/index';
-import { PromiseMiddleware } from '../middlewares/PromiseMiddleware';
+import {PromiseMiddleware} from '../middlewares/PromiseMiddleware';
 
 /**
  * Creates a redux store with middleware and reducers using an initial state

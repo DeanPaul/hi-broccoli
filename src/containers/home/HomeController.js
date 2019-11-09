@@ -3,7 +3,7 @@ import {bindActionCreators} from "redux";
 import createDataProviders from "../../createDataProviders";
 import {connect} from 'react-redux';
 import * as inviteActionCreators from "../../actions/InviteActionCreators";
-import {InviteHeader, InviteContent, InviteFooter, InviteModalContent, BusyIndicator, Modal} from '../../components';
+import {InviteHeader, InviteContent, InviteFooter, InviteModalContent, Modal} from '../../components';
 
 class HomeController extends Component {
 
