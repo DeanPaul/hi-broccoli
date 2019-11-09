@@ -9,7 +9,7 @@ module.exports = {
     },
     output: {
         path: path.resolve(__dirname, '../dist'),
-        filename: "[name].js",
+        filename: '[name].js',
     },
     resolve: {
         extensions: ['.ts', '.tsx', '.js', '.json']
@@ -23,7 +23,7 @@ module.exports = {
             },
             {
                 test: /\.css$/,
-                loader: "style-loader!css-loader"
+                loader: 'style-loader!css-loader'
             }
         ]
     },

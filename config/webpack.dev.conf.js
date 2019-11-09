@@ -6,7 +6,7 @@ const path = require('path');
 const webpack = require('webpack');
 
 module.exports = merge(baseWebpackConfig, {
-    mode: "development",
+    mode: 'development',
     devtool: 'inline-source-map',
     devServer: {
         contentBase: false,

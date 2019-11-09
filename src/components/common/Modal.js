@@ -20,7 +20,7 @@ class Modal extends Component {
             </div>
           </div>
         </div>
-        <div className='backdrop' onClick={onDismiss}></div>
+        <div className='backdrop'></div>
       </div>:null
     );
   }

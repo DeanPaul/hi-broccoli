@@ -8,9 +8,9 @@
     "start": "npm run dev",
     "build": "webpack --progress --colors --config config/webpack.prod.conf.js",
     "test:coverage": "jest --coverage",
-    "lint": "eslint --ext  .js src  --fix",
+    "lint": "eslint --ext  .js src",
     "lint-html": "eslint **/*.js -f html -o ./reports/lint-results.html",
-    "lint-fix": "eslint --fix src/*.js"
+    "lint-fix": "eslint  --fix **/*.js"
   },
   "repository": {
     "type": "git",

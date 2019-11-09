@@ -8,11 +8,11 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = merge(baseWebpackConfig, {
-    mode: "production",
+    mode: 'production',
     // devtool: '#source-map',
     output: {
         path: path.resolve(__dirname, '../dist'),
-        filename: "js/[name].[chunkhash].js",
+        filename: 'js/[name].[chunkhash].js',
     },
     plugins: [
         new CleanWebpackPlugin(['dist', 'build'], {

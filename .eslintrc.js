@@ -22,15 +22,15 @@ module.exports = {
         'func-style': ['error', 'declaration', { allowArrowFunctions: true }],
         quotes: ['error', 'single', { allowTemplateLiterals: true }],
         // warn
-        'import/first': 'warn', // import 放在文件头
-        'spaced-comment': 'warn', // 注释要含有空格
-        camelcase: 'warn', // 驼峰命名
+        // 'import/first': 'warn',
+        'spaced-comment': 'warn',
+        camelcase: 'warn',
         'max-len': ['warn', { code: 150 }],
         'operator-assignment': 'warn',
         'prefer-destructuring': 'warn',
         'prefer-template': 'warn',
         'eol-last': 'warn',
-        'object-curly-spacing': 'warn',
+        // 'object-curly-spacing': 'warn',
         'no-return-assign': 'warn',
         // off
         'no-underscore-dangle': 'off',

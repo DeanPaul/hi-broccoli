@@ -39,42 +39,37 @@ class HomeController extends Component {
             };
         },
         [InviteModalContent]: () => {
-            const {inviteName, inviteEmail, isSendingInvite, inviteSuccess, error} = this.props.invite;
-            const {sendInvite, resetModal} = this.props.inviteActions;
-            const handleSendInvite = () => sendInvite(inviteName, inviteEmail);
+            const {isSendingInvite, inviteSuccess, error, nameClass, emailClass, emailConfirmClass } = this.props.invite;
+            const {sendInvite, resetModal, saveInviteInput, validateInput} = this.props.inviteActions;
+            const handleSendInvite = () => {
+                validateInput();
+                sendInvite();
+            };
 
             const handleButtonClick = inviteSuccess ? resetModal : handleSendInvite;
-            const button_ok = {
+            const buttonOk = {
                 display: "OK",
                 className: "able",
                 handleButtonClick,
                 error
             };
-            const button_send = {
+            const buttonSend = {
                 display: isSendingInvite ? "Sending, please wait." : "Send",
                 className: isSendingInvite ? "disabled" : "able",
                 handleButtonClick,
                 error
             };
+            const save = (e) => saveInviteInput(e.target.name, e.target.value);
             const inputs = [
-                {
-                    name: "name", validate: () => {
-                    }
-                },
-                {
-                    name: "email", validate: () => {
-                    }
-                },
-                {
-                    name: "email_confirm", validate: () => {
-                    }
-                },
+                {name: "name",save, className: nameClass},
+                {name: "email", save, className:emailClass},
+                {name: "emailConfirm", save, className:emailConfirmClass},
             ];
             const content_text = "You will be the first...";
             return {
                 title: inviteSuccess ? "All Done" : "Request on invite",
                 content:inviteSuccess? {content_text} : {inputs},
-                button: inviteSuccess ? button_ok : button_send
+                button: inviteSuccess ? buttonOk : buttonSend
             };
         },
     };

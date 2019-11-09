@@ -1,4 +1,4 @@
-import {createReducer} from './utils';
+import {createReducer, validateName, validateEmail, validateEmailConfirm} from './utils';
 import ActionTypes from '../constants/ActionTypes';
 
 const initialState = {
@@ -6,6 +6,12 @@ const initialState = {
     isSendingInvite: false,
     inviteSuccess: false,
     error:null,
+    name:"",
+    email:"",
+    emailConfirm:"",
+    nameClass:"",
+    emailClass:"",
+    emailConfirmClass:"",
 };
 
 export default createReducer(initialState, {
@@ -18,6 +24,12 @@ export default createReducer(initialState, {
         isSendingInvite: false,
         inviteSuccess: false,
         error:null,
+        name:"",
+        email:"",
+        emailConfirm:"",
+        nameClass:"",
+        emailClass:"",
+        emailConfirmClass:"",
     }),
 
     [ActionTypes.INVITE_SEND_INVITE_PENDING]: (state) => ({
@@ -36,6 +48,16 @@ export default createReducer(initialState, {
         ...state,
         isSendingInvite:false,
         error:payload
+    }),
+    [ActionTypes.INVITE_SAVE_INPUT]: (state, payload) => ({
+        ...state,
+        [payload.name]:payload.value //... bad
+    }),
+    [ActionTypes.INVITE_VALIDATE_INPUT]: (state) => ({
+        ...state,
+        nameClass: validateName(state.name) ? "" : "border-red",
+        emailClass:validateEmail(state.email) ? "" : "border-red",
+        emailConfirmClass:validateEmailConfirm(state.email,state.emailConfirm) ? "" : "border-red",
     }),
 
 });
